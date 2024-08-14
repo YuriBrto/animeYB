@@ -1,0 +1,176 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Libre+Baskerville&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(./ceu.jpg);
+    color: #333;
+  }
+  
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+ 
+    color: #fff;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos dos Planos */
+  .plano-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .plano {
+
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plano h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .plano .valor {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .plano .beneficios {
+    color: #fff;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .plano .beneficios li {
+    margin-bottom: 5px;
+  }
+  
+  .btn {
+    background-color: #0043fa;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #fa9600;
+    transform: scale(1.1);
+  }
+  
+ /* Estilos da seção de vantagens */
+ .title{
+font-family: 'Libre';
+
+ }
+.vantagens {
+   padding-left: 20%;
+    background-color: #9e28288e;
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vantagens-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .vantagens h2 {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .vantagens ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .vantagens li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .vantagens .material-symbols-outlined {
+    font-size: 30px;
+    color: #007bff;
+  }
+  
+  
+  /* Estilos dos Planos (Bronze, Prata, Ouro) */
+  .bronze {
+    transition: transform 0.2s ease;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid gray;
+  }
+  
+  .prata {
+    transition: transform 0.2s ease;
+    background: transparent;
+backdrop-filter: blur(10px);
+border: 1px solid gray;
+  }
+  
+  .ouro {
+    transition: transform 0.2s ease;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid gray;
+  }
+  
+  .prata:hover{
+    transform: scale(1.1);
+  
+  }
+  .ouro:hover{
+    transform: scale(1.1);
+
+  }
+  .bronze:hover{
+    transform: scale(1.1);
+
+  }

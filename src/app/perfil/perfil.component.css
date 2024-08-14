@@ -1,0 +1,76 @@
+body {
+   margin: 0;
+    font-family: sans-serif;
+    background-image:url(./ceu.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.container {
+background: transparent;
+backdrop-filter: blur(10px);
+border: 1px solid gray;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.titulo {
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.btn {
+    transition: transform 0.2s ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fa9600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.esqueci-senha {
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.registrar {
+    color: #f1f1f1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.join-us{
+    color: #fa9600;
+}

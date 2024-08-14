@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+/* Cabeçalho geral */
+.barra-geral {
+  background-color: #191919; /* Fundo escuro elegante */
+  color: #fff; /* Texto branco para contraste */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Espaçamento interno */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.pt {
+  display: flex;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  font-size: 2rem; /* Ícones maiores */
+  margin-right: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.icones {
+  display: flex;
+  align-items: center;
+}
+
+.vip {
+  text-decoration: none;
+  cursor:grab;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.vip h2 {
+  text-decoration: none;
+  
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.vip span {
+  text-decoration: none;
+  color: #ffc107; /* Cor amarela para destacar o VIP */
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.barra-geral a, .icones a {
+  text-decoration: none; /* Remove a sublinhado */
+  background-color: transparent; /* Remove a cor de fundo */
+  border: none; /* Remove a borda */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .barra-geral {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .pt {
+    margin-bottom: 1rem;
+  }
+
+  .icones {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .vip {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,51 @@
+
+<h1 class="titulo">Animes lançamento</h1>
+<button id="scroll-button" class="scroll-button">
+    <span class="material-symbols-outlined">
+        arrow_forward
+        </span>
+  </button>
+  <button id="scroll-button-return" class="scroll-button-return">
+    <span class="material-symbols-outlined">
+        arrow_back
+        </span>
+  </button>
+
+<section #lancamentoList class="laçamento-list">
+ <div class="lançamento-card" *ngFor=" let lancamentos of lancamento">
+    <a routerLink="/lançamento/{{lancamentos.id}}" class="product-list__link">
+        <img class="imgg" [src]="lancamentos.imagem">
+        <h2 class="lancamento__name">
+           {{lancamentos.nome}}
+        </h2>
+        <p class="anoLancamento">
+            Ano de lançamento:  
+          <br>{{lancamentos.anoLancamento}}
+        </p>
+    </a>
+ </div>
+</section>
+
+<h2 class="titulo">Animes do momento</h2>
+<section class="product-list">
+    <div class="product-list__card" *ngFor=" let anime of animes">
+      <a routerLink="/animes/{{anime.id}}" class="product-list__link">
+
+            <img class="imgg" [src]="anime.imagem">
+            <h2 class="product-item__name">
+               {{anime.descricao}}
+            </h2>
+            <p class="product-item__genero">
+            Gênero : 
+                <br>{{anime.genero}}
+              </p>
+            <p class="product-item__price">
+                  Episodios disponiveis :  
+              <br>{{anime.quantidadeEps}}
+            </p>
+           
+           <button class="product-item__by-button">Assistir</button>
+
+        </a>
+    </div>
+</section>
