@@ -1,184 +1,180 @@
- .scroll-button-return {
-    position: absolute;
-    top: 35%;
-    left: 0;
-    right: unset;
-  
-    transform: translateY(-150%);
-    background-color: #000;
-    color: #fff;
-    padding: 4px;
-    border-radius: 5px;
-    cursor: pointer;
-    
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-.scroll-button{
-    position: absolute;
-    top: 35%;
-    right: 0;
-
-    transform: translateY(-90%);
-    background-color: #000;
-    color: #fff;
-    padding: 4px;
-    border-radius: 5px;
-    cursor: pointer;
-   
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-  
-  .material-symbols-outlined {
-    font-size: 24px;
-  }
-  
-  .laçamento-list {
-    overflow-x: scroll;
-  }
-  
-h1.titulo {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: #ffffff;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 42px;
-    background-image: url(./ceu.jpg);
-  }
-  h2.titulo {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: #ffffff;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 42px;
-    background-image: url(./ceu.jpg);
-  }
-  
-  
-.laçamento-list {
-    overflow: hidden;
-    white-space: nowrap;
-    background-image: url(./ceu.jpg);
-    gap: 50px;
 
-  }
-  .lancamento__name{
-    margin-bottom: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 17px;
-    color: aliceblue;
-  }
-  .anoLancamento{
-    font-size: 10px;
-    color: aliceblue;
-    margin-bottom: 40px;
-  }
-  .lançamento-card {
-    gap: 50px;
-    display: inline-block;
-    width: 180px;
-    height: 180px;
-    margin-right: 90px;
-    border: 4px white;
-    background-color: rgb(32, 32, 32);
-    box-shadow: rgba(255, 253, 253, 0.2) 0px 12px 18px 0px;   
-  }
-  
-  .lançamento-card img {
-    max-width: 180px;
-  }
-  
-  
-  
-.product-list{
-    padding: 40px 0;
-    width: fit-content;    
-    display: flex;
-    gap: 90px;
-    flex-flow: row wrap;  
-    justify-content: space-evenly;
-    align-content: left;  
+img.imgg,
+.lançamento-card,
+.product-list__card {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.scroll-buttons-wrapper {
+  position: relative;
+}
+
+.scroll-button-return,
+.scroll-button {
+  position: absolute;
+  top: 35%;
+  background-color: #000;
+  color: #fff;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.scroll-button-return:hover,
+.scroll-button:hover {
+  transform: scale(1.1);
+}
+
+.scroll-button-return {
+  left: 10px;
+}
+.scroll-button {
+  right: 10px;
+}
+
+.laçamento-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  background-image: url(./ceu.jpg);
+}
+
+.lançamento-card {
+  scroll-snap-align: start;
+  display: inline-block;
+  width: 180px;
+  height: auto;
+  border: 1px solid white;
+  background-color: rgb(32, 32, 32);
+  box-shadow: rgba(255, 253, 253, 0.2) 0px 12px 18px 0px;
+  flex-shrink: 0;
+}
+
+.lançamento-card img {
+  max-width: 200px;
+}
+h2.lancamento__name{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+
+}
+p.anoLancamento{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+
+}
+h1.titulo,
+h2.titulo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 0;
+  background-image: url(./ceu.jpg);
+}
+
+/* Seção animes */
+.product-list {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
   background-image: url(./ceu.jpg);
 }
 
 .product-list__card {
-   display: flex;
-    box-sizing: border-box;
-
-    border-radius: 4px;
-    flex: 0 1 270px;
-    height: 600px;
-    background-color: rgb(0, 0, 0);
-    box-shadow: rgba(255, 253, 253, 0.2) 0px 12px 18px 0px;       
+  border-radius: 4px;
+  width: 270px;
+  height: auto;
+  background-color: #000;
+  box-shadow: rgba(255, 253, 253, 0.2) 0px 12px 18px 0px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .product-list__card:hover {
-    outline: 1px solid var(--blue);
-    transform: scale(1.1, 1.1);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  outline: 1px solid var(--blue);
+  transform: scale(1.05);
 }
 
 .product-list__link {
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
-    row-gap: 0px; 
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
-.product-list__card  img {
-    height: 250px;
-    width: 270px;    
-    display: flex;
-    border-radius: 4px;
+.product-list__card img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.product-item__name {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 24px;
-    color:rgb(255, 255, 255);
-    display: flex;
-   
-}
-
+.product-item__name,
+.product-item__genero,
 .product-item__price {
-    color: rgb(255, 255, 255);
-font-family:cursive;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
 }
 
-.product-item__price-deion {
-
-    color: var(--gray);
-    font-size: 12px;
-    font-weight: bold;
-}
-.product-item__genero{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: bold;
-    font-family:cursive;
-    text-align: center;
-}
 .product-item__by-button {
-    background-color: rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    padding: 6px 10px;
-    border-radius: 20px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-.product-item__buy-button:hover {
-    filter: brightness(1.1);
-    cursor: pointer;
-}
-.product__price-description{
-    color: blue;
+@media (max-width: 768px) {
+  h1.titulo,
+  h2.titulo {
+    font-size: 26px;
+    padding: 20px;
+  }
+
+  .lançamento-card {
+    width: 140px;
+  }
+
+  .lançamento-card img {
+    max-width: 140px;
+  }
+
+  .scroll-button,
+  .scroll-button-return {
+    top: 40%;
+    padding: 4px;
+  }
+
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-list__card {
+    width: 90%;
+  }
 }

@@ -1,35 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=+Baskerville&family=Oswald:wght@200..700&display=swap');
-
-
 .product__container {
-  background-image: url(./ceu.jpg); /* Certifique-se de que o caminho para a imagem esteja correto */
-  background-size: cover; /* Ajuste a imagem para cobrir toda a seção */
-  background-position: center; /* Centralize a imagem */
-  background-repeat: no-repeat; /* Impede a repetição da imagem */
   display: flex;
-  height: 600px;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
+  background: url(./ceu.jpg) center/cover no-repeat;
+  min-height: 500px;
+  color: white;
 }
 
 .product-image__container {
-  border: #282828;
+  flex: 1 1 100%;
+  max-width: 500px;
+  margin: auto;
   position: relative;
-  width: 50%; /* Ajuste o tamanho conforme necessário */
-  height: 100%; /* Ajuste o tamanho conforme necessário */
 }
 
 .product-image__container img {
-  margin: 1;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  transition: 1s;
-  filter: blur(5px); /* Ajuste o valor do blur para o efeito desejado */
+  filter: blur(5px);
+  transition: filter 0.5s;
 }
 
 .product-image__container img:hover {
-  filter: blur(0px); /* Remove o blur ao passar o mouse */
-  transition: 1s;
+  filter: blur(0);
 }
 
 .product-image__container button {
@@ -37,344 +32,183 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: transparent;
+  background: transparent;
   border: none;
-  padding: 0;
   cursor: pointer;
 }
 
 .product-image__container button svg {
   width: 40px;
   height: 40px;
-  fill: white; /* Define a cor do ícone */
-}
-
-.product-image__container button:hover svg {
-  fill: #007bff; /* Define a cor do ícone ao passar o mouse */
-}
-
-.product-description__container {
-  text-align: left;
-  padding: 20px;
-  color: #fff;
-  display: flex;
-  flex-direction: column; /* Alinha os elementos da descrição verticalmente */
-  gap: 15px; /* Espaçamento entre os elementos da descrição */
-  flex: 1; /* Faz a seção de descrição ocupar o espaço restante */
-}
-
-.product__name {
-
-  width: 400px;
-  border-radius: 10px;
- font-family:'Oswald';
-  font-size: 3.5rem;
-  font-weight: bold;
-}
-
-.product__price {
-  font-size: 1.5rem;
-}
-
-.descricao {
-
-  font-size: 1.8rem;
-font-family: 'Oswald';}
-
-.player-controls {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #282828;
-  border-radius: 10px;
-}
-
-.player-controls button {
-  background-color: black;
-  border: none;
-  color: #fff;
-  font-size: 20px; /* Ajuste o tamanho da fonte do botão */
-  cursor: pointer;
-  padding: 5px 10px; /* Adicione padding ao botão */
-}
-
-.progress-bar {
-  width: 100%;
-  height: 5px;
-  background-color: #333;
-  border-radius: 5px;
-  overflow: hidden;
+  stroke: white;
 }
 
 .volume-control {
   position: absolute;
-  bottom: 10px; /* Ajuste a distância da borda inferior */
+  bottom: 10px;
   left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
+  transform: translateX(-50%);
 }
 
 .volume-control input {
-  width: 50px;
+  width: 100px;
   height: 5px;
-  background-color: #333;
+  background: #333;
   border-radius: 5px;
-  outline: none;
-  appearance: none;
 }
 
-.volume-control input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 10px;
-  background-color: #ff6600;
-  border-radius: 50%;
-  cursor: pointer;
+.product-description__container {
+  flex: 1 1 100%;
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  font-family: 'Oswald', sans-serif;
 }
 
-
-.volume-control input::-moz-range-thumb {
-  width: 10px;
-  height: 10px;
-  background-color: #ff6600;
-  border-radius: 50%;
-  cursor: pointer;
+.product__name {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
-
-.volume-control input::-ms-thumb {
-  width: 10px;
-  height: 10px;
-  background-color: #ff6600;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* Botões de Episódios */
-.EpAnterior, .EpProximo {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-size: 2rem; /* Ajuste o tamanho da fonte se necessário */
-  color: #fff; /* Cor do texto */
-  transition: transform 0.3s ease; /* Transição para efeito hover */
-}
-
-.EpAnterior svg, .EpProximo svg {
-  width: 24px;
-  height: 24px;
-}
-
-/* Efeito Hover para os Botões */
-.EpAnterior:hover {
-  transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
-}
-
-.EpProximo:hover {
-  transform: scale(1.1);
-}
-
-/* Estilos Modernos para os Botões */
-.EpAnterior {
-  background-color: #ff6600; /* Laranja */
-  border-radius: 50px; /* Arredondamento dos cantos */
-  padding: 10px 20px; /* Espaçamento interno */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-}
-
-.EpProximo {
-  background-color: #ff6600; /* Laranja */
-  border-radius: 50px;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
 
 .episode-controls {
   display: flex;
   align-items: center;
-  gap: 15px; /* Espaço entre os elementos */
-}
-
-.product__price {
-  font-size: 1.5rem;
-  text-align: center; /* Centraliza o texto */
-}
-
-/* Estilos da segunda seção */
-.segunda_parte {
-  
-  background-image: url(./ceu.jpg);
-  background-size: cover; /* Ajuste a imagem para cobrir toda a seção */
-  background-position: center; /* Centralize a imagem */
-  background-repeat: no-repeat; /* Impede a repetição da imagem */
-  display: flex;
+  justify-content: center;
   gap: 20px;
-  position: relative; /* Define o ponto de referência para o posicionamento absoluto da seção VIP */
 }
 
-.vantagens {
-  margin: 1;
-  background: rgba(39, 32, 32, 0.8); /* Adiciona opacidade ao fundo */
-  backdrop-filter: blur(10px);
-  border: 1px solid gray;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1; /* Faz a seção de vantagens ocupar o espaço restante */
-}
-
-.vantagens h2 {
-  color: #ffffff; /* Cor do texto mais escura para melhor contraste */
-  font-size: 2.2rem;
-  margin-bottom: 2px;
-}
-
-.vantagens ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.vantagens li {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 1.8rem;
-  color: #ffffff; /* Cor do texto mais escura para melhor contraste */
-}
-
-.comentarios {
-  flex: 1; /* Faz a seção de comentários ocupar o espaço restante */
-  padding: 20px;
-  border-radius: 10px;
-  background: rgba(37, 36, 36, 0.8); /* Adiciona opacidade ao fundo */
-  backdrop-filter: blur(10px);
-  border: 1px solid gray;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.text-comment {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #ffffff; /* Cor do texto mais escura para melhor contraste */
-}
-
-.reçaões {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  gap: 1rem;
-}
-
-.reçaões button {
-  background-color: transparent;
+.episode-controls button {
+  background: #ff6600;
   border: none;
-  font-size: 2rem;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
-.reçaões button:hover {
+.episode-controls button:hover {
   transform: scale(1.1);
 }
 
-.reçaões button:active { /* Adiciona um efeito de destaque ao clicar */
-  transform: scale(0.95);
+.product__price {
+  font-size: 1.4rem;
+}
+
+.descricao {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* SEGUNDA PARTE */
+
+.segunda_parte {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background: url(./ceu.jpg) center/cover no-repeat;
+}
+
+.vantagens,
+.comentarios {
+  flex: 1 1 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(10px);
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.vantagens h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.vantagens ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vantagens li {
+  font-size: 1.1rem;
+}
+
+.text-comment {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.reacoes {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.reacoes button {
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.reacoes button:hover {
+  transform: scale(1.2);
 }
 
 .comentarios input[type="text"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #222;
+  color: white;
+  font-size: 1rem;
 }
 
-/* Estilização para o emoji dentro do input */
-.comentarios input[type="text"]:focus {
-  outline: none;
-  border-color: #4c98e9;
-}
+/* RESPONSIVO */
 
-.comentarios input[type="text"]::placeholder {
-  color: #999;
-}
+@media (max-width: 768px) {
+  .product__container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Adiciona o emoji ao input */
-.reçaões button:focus {
-  outline: none;
-}
+  .product-description__container,
+  .product-image__container {
+    max-width: 100%;
+  }
 
-.reçaões button:focus + .comentarios input[type="text"]::placeholder {
-  content: attr(data-emoji);
-  color: #333;
-}
+  .product__name {
+    font-size: 2rem;
+    text-align: center;
+  }
 
-/* Adiciona o atributo data-emoji aos botões */
-.reçaões li:nth-child(1) button {
-  data-emoji: "😍";
-}
+  .descricao {
+    font-size: 1rem;
+    text-align: center;
+  }
 
-.reçaões li:nth-child(2) button {
-  data-emoji: "😡";
-}
+  .episode-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.reçaões li:nth-child(3) button {
-  data-emoji: "🤬";
-}
+  .segunda_parte {
+    flex-direction: column;
+  }
 
-.reçaões li:nth-child(4) button {
-  data-emoji: "🤯";
-}
-
-.reçaões li:nth-child(5) button {
-  data-emoji: "☹️";
-}
-
-.vip {
-  position: absolute;
-  top: 50%; /* Centraliza verticalmente */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta o posicionamento */
-  text-decoration: none;
-  cursor:grab;
-  display: flex;
-  align-items: center;
-  z-index: 1; /* Garante que a seção VIP fique em cima da imagem de fundo */
-}
-
-.vip span {
-  transition: transform 0.2s ease;
-  font-size: 250px; /* Ajuste o tamanho do ícone */
-  padding-left: 420px; /* Remove o padding */
-  text-decoration: none;
-  color: #ffc107; /* Cor amarela para destacar o VIP */
-}
-.vip span:hover {
-  transform: scale(1.1);
-}
-
-.vip span:active { /* Adiciona um efeito de destaque ao clicar */
-  transform: scale(0.95);
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
-a:hover {
-  text-decoration: underline;
+  .text-comment {
+    text-align: center;
+  }
 }

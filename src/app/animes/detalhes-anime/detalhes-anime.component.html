@@ -1,65 +1,65 @@
-
 <section class="product__container">
-    <div class="product-image__container">
-        <img [src]="animes?.imagem" alt="Imagem do Anime">
-        <button>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-        </button>
-        <div class="volume-control">
-          <input type="range" min="0" max="100" value="50">
-        </div>
-      </div>
-      
-      <div class="product-description__container">
-        <h2 class="product__name">{{animes?.descricao}}</h2>
-        <div class="episode-controls"> 
-          <button class="EpAnterior">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <h3 class="product__price">Episódio {{animes?.quantidadeEps}}</h3>
-          <button class="EpProximo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-        </div>
-        <h4 class="descricao">Sinopse : {{animes?.miniDescricao}}</h4>
-        <div class="player-controls">
-        </div>
-      </div>
-      
-    
-  
+  <div class="product-image__container">
+    <img [src]="animes?.imagem" alt="Imagem do Anime" />
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+      </svg>
+    </button>
+    <div class="volume-control">
+      <input type="range" min="0" max="100" value="50" />
+    </div>
+  </div>
+
+  <div class="product-description__container">
+    <h2 class="product__name">{{ animes?.descricao }}</h2>
+
+    <div class="episode-controls">
+      <button class="EpAnterior">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+
+      <h3 class="product__price">Episódio {{ animes?.quantidadeEps }}</h3>
+
+      <button class="EpProximo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+
+    <h4 class="descricao">Sinopse: {{ animes?.miniDescricao }}</h4>
+  </div>
 </section>
+
 <section class="segunda_parte">
   <div class="vantagens">
     <a routerLink="/vip/">
-      <div class="vip" >
-                  
-        <span class="material-symbols-outlined" >
-            star
-            </span></div>
+      <div class="vip">
+        <span class="material-symbols-outlined">star</span>
+      </div>
     </a>
-  <h2 class="text-vip">Vantagens de ser membro VIP:</h2>
-  
-  <ul class="sub-vantagens">
-    <li>Acesso a conteúdo exclusivo</li>
-    <li>Experiência sem anúncios</li>
-    <li>Download ilimitado</li>
-    <li>Suporte prioritário</li>
-    <li>E muito mais!</li>
-  </ul>
-  
-  
-</div>
-<div class="comentarios">
-  <h1 class="text-comment">Gostou do epísódio? deixe sua opinião : </h1>
-  <ul class="reçaões">
-    <li><button>😍</button></li>
-    <li><button>😡</button></li>
-    <li><button>🤬</button></li>
-    <li><button>🤯</button></li>
-    <li><button>☹️</button></li>
-  </ul>
-  
- <input type="text" placeholder="Deixe um comentário (mas sem spoiler...)">
-</div>
+    <h2 class="text-vip">Vantagens de ser membro VIP:</h2>
+    <ul class="sub-vantagens">
+      <li>Acesso a conteúdo exclusivo</li>
+      <li>Experiência sem anúncios</li>
+      <li>Download ilimitado</li>
+      <li>Suporte prioritário</li>
+      <li>E muito mais!</li>
+    </ul>
+  </div>
+
+  <div class="comentarios">
+    <h1 class="text-comment">Gostou do episódio? Deixe sua opinião:</h1>
+    <ul class="reacoes">
+      <li><button>😍</button></li>
+      <li><button>😡</button></li>
+      <li><button>🤬</button></li>
+      <li><button>🤯</button></li>
+      <li><button>☹️</button></li>
+    </ul>
+    <input type="text" placeholder="Deixe um comentário (sem spoilers)..." />
+  </div>
 </section>

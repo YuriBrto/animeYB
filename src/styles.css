@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000; /* ou outro background padrão se quiser */
+  overflow-x: hidden;
+}
